@@ -1,0 +1,7 @@
+load_pipeline: True
+
+# SD-Turbo
+pipeline_type: StableDiffusionPipeline
+pipeline_path: /root/autodl-tmp/stabilityai/sd-turbo  # server
+torch_dtype: float16
+variant: fp16

@@ -1,0 +1,29 @@
+name: sample_freeu-mouse
+
+subtask: None
+
+task:
+  prompt: "A photo of a cute mouse wearing a crown."
+
+  height: 512
+  width: 512
+
+  # SD
+  num_inference_step: 25
+  guidance_scale: 7.5
+  negative_prompt: "low quality, blurry, ugly, oversaturated"
+
+freeu:
+  # the first stage block of the decoder
+  b1: 1.1  # backbone factor
+  s1: 0.2  # skip factor
+
+  # the second stage block of the decoder
+  b2: 1.2  # backbone factor
+  s2: 0.2  # skip factor
+
+sample:
+  sample_standard: True
+
+  save_sample: True
+  sample_root_path: "./tmp/sample_freeu"

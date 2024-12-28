@@ -1,0 +1,7 @@
+load_pipeline: True
+
+# SDXL
+pipeline_type: StableDiffusionXLPipeline
+pipeline_path: /root/autodl-tmp/stabilityai/stable-diffusion-xl-base-1.0/  # server
+torch_dtype: float16
+variant: fp16

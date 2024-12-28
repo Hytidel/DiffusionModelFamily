@@ -1,0 +1,18 @@
+name: sample_flux.1-dev-cat
+
+subtask: None
+
+task:
+  prompt: "A cat holding a sign that says hello world"
+
+  height: 1024
+  width: 1024
+
+  # FLUX.1-dev
+  num_inference_step: 50
+  guidance_scale: 3.5
+  max_sequence_length: 512
+
+sample:
+  save_sample: True
+  sample_root_path: "./tmp/sample_flux.1-dev"

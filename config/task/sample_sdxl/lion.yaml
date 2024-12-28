@@ -1,0 +1,18 @@
+name: sample_sdxl-lion
+
+subtask: None
+
+task:
+  prompt: "A majestic lion jumping from a big stone at night"
+
+  height: 512
+  width: 512
+
+  # SDXL
+  num_inference_step: 40
+  guidance_scale: 4.5
+  negative_prompt: "low quality, blurry, ugly, oversaturated"
+
+sample:
+  save_sample: True
+  sample_root_path: "./tmp/sample_sdxl"

@@ -1,0 +1,17 @@
+name: sample_sd-turbo-racoon
+
+subtask: None
+
+task:
+  prompt: "A cinematic shot of a baby racoon wearing an intricate italian priest robe."
+
+  height: 512
+  width: 512
+
+  # SD-Turbo
+  num_inference_step: 1
+  guidance_scale: 0.0
+
+sample:
+  save_sample: True
+  sample_root_path: "./tmp/sample_sd-turbo"

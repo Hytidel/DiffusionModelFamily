@@ -1,0 +1,19 @@
+# keys
+keys.md
+
+# tmp file
+tmp
+outputs
+multirun
+__pycache__
+*/__pycache__
+
+# dataset
+data
+data.zip
+
+# others
+pip_list.txt
+script/watch_nvidia_smi.sh
+script/update_code.sh
+*.zip

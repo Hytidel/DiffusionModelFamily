@@ -1,0 +1,12 @@
+exp_name: 
+  default_exp_name: "exp"
+  add_timestamp: True
+
+seed: 42
+
+enable_pause: True
+
+defaults:
+  - task: sample_freeu/mouse
+  - pipeline: sd-2-1_32
+  - _self_
