@@ -38,11 +38,13 @@ def sample_sdxl_implement(
     width = get_true_value(cfg["task"]["task"]["width"])
     num_inference_step = get_true_value(cfg["task"]["task"]["num_inference_step"])
     guidance_scale = get_true_value(cfg["task"]["task"]["guidance_scale"])
+    negative_prompt = get_true_value(cfg["task"]["task"]["negative_prompt"])
 
     logger(f"    prompt: {prompt}")
     logger(f"    (height, width): ({height}, {width})")
     logger(f"    num_inference_step: {num_inference_step}")
     logger(f"    guidance_scale: {guidance_scale}")
+    logger(f"    negative_prompt: {negative_prompt}")
     
     logger(f"[Task] Loading finished. ")
 
