@@ -2,7 +2,7 @@
 
 [Hytidel](https://hytidel.github.io/)
 
-[Tutorial Video (Chinese)]()
+[Tutorial Video (Chinese)](https://www.bilibili.com/video/BV1kB6EYcEHp/)
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FHytidel%2FDiffusionModelFamily%2F&count_bg=%23FF8383&title_bg=%23A19AD3&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
