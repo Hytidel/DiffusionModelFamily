@@ -130,9 +130,33 @@ def img_latent_to_pil(
     img_latent, 
     pipeline
 ) -> Image.Image:
-    img_pil = pipeline.decode_latents(img_latent)
+    if hasattr(pipeline, "decode_latents"):
+        img_numpy = pipeline.decode_latents(img_latent)
 
-    return pipeline.numpy_to_pil(img_pil)
+        return pipeline.numpy_to_pil(img_numpy)
+    else:
+        # make sure the VAE is in `float32` mode, as it overflows in `float16`
+        if (pipeline.vae.dtype == torch.float16) and pipeline.vae.config.force_upcast:
+            pipeline.upcast_vae()
+            img_latent = img_latent.to(
+                next(
+                    iter(
+                        pipeline.vae.post_quant_conv.parameters()
+                    )
+                ).dtype
+            )
+
+        img_tensor = pipeline.vae.decode(
+            img_latent / pipeline.vae.config.scaling_factor, 
+            return_dict = False
+        )[0]
+        
+        img_pil = pipeline.image_processor.postprocess(
+            img_tensor, 
+            output_type = "pil"
+        )
+
+        return img_pil
 
 def process_prompt_list(
     prompt: Union[str, List[str]], 
